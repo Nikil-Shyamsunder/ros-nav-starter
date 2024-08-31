@@ -12,7 +12,8 @@ This tutorial will guide you through the steps to create a Docker image that run
    First, clone the GitHub repository that contains the ROS2 project files into your home directory:
 
    ```bash
-   git clone https://github.com/Nikil-Shyamsunder/ros-nav-starter.git ~/ros2_ws
+   cd
+   git clone https://github.com/Nikil-Shyamsunder/ros-nav-starter.git
    ```
    
    This will create a directory named `ros2_ws` in your home directory with all the necessary files.
