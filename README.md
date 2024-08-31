@@ -22,7 +22,7 @@ This tutorial will guide you through the steps to create a Docker image that run
 1. **Build your Docker image**:
     Navigate to your project directory and run the following command to build the image:
 
-    ```
+    ```bash
     docker build -t ros2_humble_desktop_full .
     ```
 
@@ -35,8 +35,8 @@ This tutorial will guide you through the steps to create a Docker image that run
 
 3. **Make the Scripts Executable:** Ensure the Python scripts are executable:
    ```bash
-   chmod +x ~/ros2_ws/src/my_test_package/src/talker.py
-   chmod +x ~/ros2_ws/src/my_test_package/src/listener.py
+   chmod +x ~/ros-nav-starter/ros2_ws/src/my_test_package/src/talker.py
+   chmod +x ~/ros-nav-starter/ros2_ws/src/my_test_package/src/listener.py
    ```
 
 ### Step 3: Set Up and Run the Docker Container
@@ -48,12 +48,12 @@ To write the files for the project on your host machine and then run them within
 
    ```bash
    docker run -it --rm --name ros2_test_container \
-     -v ~/ros2_ws:/home/ros2_user/ros2_ws \
+     -v ~/ros-nav-starter/ros2_ws:/home/ros2_user/ros2_ws \
      ros2_humble_desktop_full
    ```
 
    This command does the following:
-   - `-v ~/ros2_ws:/home/ros2_user/ros2_ws`: Mounts the `~/ros2_ws` directory on your host machine to `/home/ros2_user/ros2_ws` inside the Docker container.
+   - `-v ~/ros-nav-starter/ros2_ws:/home/ros2_user/ros2_ws`: Mounts the `~/ros2_ws` directory on your host machine to `/home/ros2_user/ros2_ws` inside the Docker container.
 
 2. **Build the ROS2 Workspace Inside the Container**:
    Once inside the container, navigate to the ROS2 workspace and build the package:
