@@ -24,6 +24,7 @@ This tutorial will guide you through the steps to create a Docker image that run
     Navigate to your project directory and run the following command to build the image:
 
     ```bash
+    cd ros-nav-starter
     docker build -t ros2_humble_desktop_full .
     ```
 
