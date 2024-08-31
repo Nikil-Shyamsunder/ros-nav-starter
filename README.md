@@ -10,7 +10,8 @@ This tutorial will guide you through the steps to create a Docker image that run
 1. **Build your Docker image**:
     Navigate to your project directory and run the following command to build the image:
 
-    ```docker build -t ros2_humble_desktop_full .
+    ```
+    docker build -t ros2_humble_desktop_full .
     ```
 
     This command tells Docker to build an image using the Dockerfile in the current directory (`.`) and tag it as `ros2_humble_desktop_full`.
