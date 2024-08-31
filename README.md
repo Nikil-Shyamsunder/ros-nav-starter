@@ -1,11 +1,23 @@
-### Creating a Small ROS2 Humble Project run through a Ubuntu-based Docker Image  
+### Creating a Small ROS2 Humble Project Run Through a Ubuntu-Based Docker Image  
 
 This tutorial will guide you through the steps to create a Docker image that runs Ubuntu with ROS2 Humble-Desktop-Full and test it with a small "Hello World" project. This image will be compatible with computers running any operating system, allowing you to develop and test ROS2 applications in a consistent environment.
 
 #### Prerequisites
 - **Docker**: Ensure Docker is installed on your machine. You can download the desktop version from the [Docker website](https://www.docker.com/products/docker-desktop).
+- **Git**: Ensure Git is installed on your machine. You can download it from the [Git website](https://git-scm.com/).
 
-#### Step 1: Build the Docker Image
+### Step 1: Clone the GitHub Repository
+
+1. **Clone the Repository**:
+   First, clone the GitHub repository that contains the ROS2 project files into your home directory:
+
+   ```bash
+   git clone https://github.com/Nikil-Shyamsunder/ros-nav-starter.git ~/ros2_ws
+   ```
+   
+   This will create a directory named `ros2_ws` in your home directory with all the necessary files.
+
+### Step 2: Build the Docker Image
 
 1. **Build your Docker image**:
     Navigate to your project directory and run the following command to build the image:
@@ -22,10 +34,12 @@ This tutorial will guide you through the steps to create a Docker image that run
     ```
 
 3. **Make the Scripts Executable:** Ensure the Python scripts are executable:
-   ```chmod +x ros2_ws/src/my_test_package/src/talker.py
-   chmod +x ros2_ws/src/my_test_package/src/listener.py```
+   ```bash
+   chmod +x ~/ros2_ws/src/my_test_package/src/talker.py
+   chmod +x ~/ros2_ws/src/my_test_package/src/listener.py
+   ```
 
-#### Step 2: Set Up and Run the Docker Container
+### Step 3: Set Up and Run the Docker Container
 
 To write the files for the project on your host machine and then run them within the Docker container, you can follow these steps:
 
@@ -56,7 +70,7 @@ To write the files for the project on your host machine and then run them within
    source install/setup.bash
    ```
 
-### Step 3: Run the Nodes in the Docker Container
+### Step 4: Run the Nodes in the Docker Container
 
 1. **Run the Publisher Node**:
    In the Docker container, start the publisher node:
@@ -82,7 +96,7 @@ To write the files for the project on your host machine and then run them within
    ros2 run my_test_package listener.py
    ```
 
-### Step 4: Verify the Output
+### Step 5: Verify the Output
 
 - In the first terminal (with the publisher), you should see messages like:
 
@@ -103,10 +117,3 @@ To write the files for the project on your host machine and then run them within
 ### Summary
 
 By following these steps, you can develop and manage your ROS2 project files directly on your host machine while running and testing them inside a Docker container. This setup allows you to use your preferred development tools while ensuring a consistent runtime environment within Docker.
-
-
-
-
-
-
-
