@@ -30,12 +30,7 @@ This tutorial will guide you through the steps to create a Docker image that run
 
     This command tells Docker to build an image using the Dockerfile in the current directory (`.`) and tag it as `ros2_humble_desktop_full`.
 
-2. **Start a Docker Container**:
-    ```bash
-    docker run -it --rm --name ros2_test_container ros2_humble_desktop_full
-    ```
-
-3. **Make the Scripts Executable:** Ensure the Python scripts are executable:
+2. **Make the Scripts Executable:** Ensure the Python scripts are executable:
    ```bash
    chmod +x ~/ros-nav-starter/ros2_ws/src/my_test_package/src/talker.py
    chmod +x ~/ros-nav-starter/ros2_ws/src/my_test_package/src/listener.py
