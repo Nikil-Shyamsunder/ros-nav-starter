@@ -1,5 +1,5 @@
 ##############################################
-# Created from template ros2.dockerfile.jinja
+# Adapted from @athackst -- https://github.com/athackst/dockerfiles/blob/main/ros2/
 ##############################################
 
 ###########################################
